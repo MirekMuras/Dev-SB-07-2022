@@ -22,5 +22,9 @@ def dummy_data():
     #cretae fake profile dataframe
     df = pd.DataFrame(data=data)
 
-    return df
+
+def split_full_name(data):
+    data[['first_name','last_name']] = data['name'].loc[data['name'].str.split().str.len() == 2].str.split(expand=True)
+
+    return data
 

@@ -1,4 +1,7 @@
+import pandas as pd
+
 import test1
+#from playground1 import d1
 
 # This is a sample Python script.
 
@@ -6,16 +9,18 @@ import test1
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 
 
-def print_hi(name):
+def main():
     # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-    df = test1.dummy_data()
-    print(df.columns)
+    # df = test1.dummy_data()
+    # df.to_csv('./playground1/data/data_1.csv', index=False)
+
+    new_df = pd.read_csv('./playground1/data/data_1.csv')
+    #test = d1.handling_missing_data(new_df)
+    print(new_df)
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('this is Miro and this is my testing environment!\n'
-             '--------------------------------------------------')
+    main()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
